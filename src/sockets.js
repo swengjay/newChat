@@ -8,7 +8,7 @@ module.exports = (io) => {
     io.on('connection', async socket => {
         console.log('new user connected');
         //look for msgs in db (historial) ALL THIS HAPPENS BEFORE THE USER ENTERS TO THE CHAT
-        let messages = await Chat.find({}).limit(8);
+        let messages = await Chat.find({}).sort({created_at: -1}).limit(8);
         //send to the client all the msgs stored in the db
         socket.emit('load msgs', messages);
 
