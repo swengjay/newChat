@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io = socketio.listen(server);
 
 // db connection
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect('mongodb://kybel_dev:8Cz5RWFtNMyqrrR3@67.23.241.26:27017/chat_db')
 .then(db => console.log('db is connected'))
 .catch(err => console.log(err));
 
