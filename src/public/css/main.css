@@ -1,0 +1,28 @@
+body {
+      background: #8e2de2;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.navbar-light {
+      background-color: #F1F3FB;
+}
+
+#containerWrap {
+      display: none;
+}
+
+.timeColor {
+      color: #6C6F71;
+}
+
+.whisper {
+      color:gray;
+      font-style: italic;
+}
+
+.error {
+      color:red;
+}

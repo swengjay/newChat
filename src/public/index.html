@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chat Javascript Fullstack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- FONT AWSOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <!-- MAIN STYLES -->
+    <link rel="stylesheet" type="text/css" media="screen" 
+    href="/css/main.css" />
+</head>
+<body>
+    <nav class="navbar navbar-light">
+        <a href="/" class="navbar-brand mx-auto">Welcome perros</a>
+    </nav>
+    
+    <div class="card col-md-2 mt-5 mx-auto" id="nickWrap">
+        <div class="card-header mx-auto">
+            <h3>Enter your username</h3>
+        </div>
+        <p id="nickError"></p>
+        <div class="card-body">
+            <form action="" id="nickForm">
+                <input type="text" id="nickname" class="form-control">
+                <button type="submit" class="btn btn-warning btn-block mt-2"><i class="fas fa-location-arrow"></i>
+                Submit</button>
+            </form>
+        </div>
+    </div>    
+
+    <div class="container" id="containerWrap">
+        <div class="row">
+            <div class="col-md-6 offset-md-1 mt-4">
+                <div class="card">
+                    <div class="card-header" id="chat">
+                        <h4>Chat</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="message-form" action="card-footer" autocomlpete="off">
+                            <div class="input-group">
+                                <input type="text" id="message" class="form-control" name="message">
+                                <div class="input-group-append">
+                                    <button type="submit" name="submit" class="btn btn-warning" disabled><i class="fas fa-location-arrow"></i>
+                                        Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>users</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="usernames"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="/js/libs/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="/js/libs/moment.js"></script>
+    <script src="/js/main.js" charset="utf-8"></script>
+</body>
+</html>
